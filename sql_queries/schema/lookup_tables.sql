@@ -28,6 +28,7 @@ CREATE TABLE arrival_method (
 /* Outcome Table
 	Lookup table for describing the patient outcome 
 */
+
 CREATE TABLE outcome (
 	outcome_id SERIAL PRIMARY KEY,
 	outcome_name VARCHAR(100) NOT NULL UNIQUE

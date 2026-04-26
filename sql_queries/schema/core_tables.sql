@@ -41,7 +41,6 @@ CREATE TABLE visit (
 	first_assessment_time TIMESTAMP,
 	treatment_start TIMESTAMP,
 	discharge_time TIMESTAMP,
-
 	/* Foreign key constraints */
 	CONSTRAINT fk_visit_patient
 		FOREIGN KEY (patient_id)
@@ -78,7 +77,6 @@ CREATE TABLE visit (
 		REFERENCES outcome(outcome_id)
 		ON UPDATE CASCADE
 		ON DELETE RESTRICT,
-
 	/* Check constraints */
 	CONSTRAINT chk_assessment_after_arrival
 		CHECK (
