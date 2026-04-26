@@ -1,0 +1,6 @@
+triage_name,priority
+Life Threatening Conditions,1
+Very Urgent,2
+Urgent,3
+Not Threatening to Life & Limb,4
+Not Urgent,5
