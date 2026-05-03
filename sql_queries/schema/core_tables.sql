@@ -10,20 +10,6 @@ CREATE TABLE patient (
 	postcode_area postcode_area_type
 );
 
-/* Clinician Table
-	Core table for storing clinician information, linked to a department.
-*/
-CREATE TABLE clinician (
-	clinician_id SERIAL PRIMARY KEY,
-	department_id INTEGER NOT NULL,
-	clinician_role VARCHAR(50) NOT NULL,
-	CONSTRAINT fk_clinician_department
-		FOREIGN KEY (department_id)
-		REFERENCES department(department_id)
-		ON UPDATE CASCADE
-		ON DELETE RESTRICT
-);
-
 /* Visit Table
 	Core table capturing each A&E attendance.
 	This table links the patient, triage category, arrival method,
@@ -57,12 +43,6 @@ CREATE TABLE visit (
 	CONSTRAINT fk_visit_arrival_method
 		FOREIGN KEY (arrival_method_id)
 		REFERENCES arrival_method(arrival_method_id)
-		ON UPDATE CASCADE
-		ON DELETE RESTRICT,
-
-	CONSTRAINT fk_visit_clinician
-		FOREIGN KEY (clinician_id)
-		REFERENCES clinician(clinician_id)
 		ON UPDATE CASCADE
 		ON DELETE RESTRICT,
 
