@@ -1,6 +1,6 @@
-triage_name,priority
-Life Threatening Conditions,1
-Very Urgent,2
-Urgent,3
-Not Threatening to Life & Limb,4
-Not Urgent,5
+triage_id,triage_name,priority
+1,Life Threatening Conditions,1
+2,Very Urgent,2
+3,Urgent,3
+4,Not Threatening to Life & Limb,4
+5,Not Urgent,5
