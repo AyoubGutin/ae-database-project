@@ -1,0 +1,7 @@
+arrival_method_id,arrival_method_name
+1,Ambulance
+2,Walk-in
+3,GP
+4,NHS 111
+5,Police/Other Emergency Services
+6,Other
